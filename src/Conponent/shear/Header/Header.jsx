@@ -41,7 +41,10 @@ function Header() {
                         <li className='hover:text-[#ed2519]'><a>Contact me</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end">
+                <div className="navbar-end gap-4 flex items-center">
+                    <div>
+                        <input type="checkbox" className="toggle toggle-error" defaultChecked />
+                    </div>
                     <a className="btn bg-[#ed2519] rounded-full px-6 py-5 hover:bg-white hover:text-black">Button</a>
                 </div>
             </div>
