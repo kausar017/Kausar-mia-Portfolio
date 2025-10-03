@@ -1,8 +1,12 @@
 import React from 'react'
+import { AiFillProject } from 'react-icons/ai'
+import { FaDownload } from 'react-icons/fa'
+import { IoMdContact, IoMdHome, IoMdInformationCircle } from 'react-icons/io'
+import { IoSettingsSharp } from 'react-icons/io5'
 
 function Header() {
     return (
-        <div className='bg-[#121212] text-primary-content '>
+        <div className='bg-[#121212] text-primary-content sticky top-0 z-50 box-shadow-lg'>
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -34,18 +38,18 @@ function Header() {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-5 text-lg text-white font-semibold">
-                        <li className='hover:text-[#ed2519]'><a>Home</a></li>
-                        <li className='hover:text-[#ed2519]'><a>Service</a></li>
-                        <li className='hover:text-[#ed2519]'><a>About me</a></li>
-                        <li className='hover:text-[#ed2519]'><a>Portfolio</a></li>
-                        <li className='hover:text-[#ed2519]'><a>Contact me</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='/'><IoMdHome />Home</a></li>
+                        <li className='hover:text-[#ed2519]'><a><IoSettingsSharp />Service</a></li>
+                        <li className='hover:text-[#ed2519]'><a><IoMdInformationCircle />About me</a></li>
+                        <li className='hover:text-[#ed2519]'><a><AiFillProject />Portfolio</a></li>
+                        <li className='hover:text-[#ed2519]'><a><IoMdContact/>Contact me</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end gap-4 flex items-center">
                     <div>
                         <input type="checkbox" className="toggle toggle-error" defaultChecked />
                     </div>
-                    <a className="btn bg-[#ed2519] rounded-full px-6 py-5 hover:bg-white hover:text-black">Button</a>
+                    <a className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none">Download CV <FaDownload /></a>
                 </div>
             </div>
         </div>

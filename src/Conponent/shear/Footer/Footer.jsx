@@ -1,10 +1,11 @@
 import { BsTiktok } from "react-icons/bs"
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa"
+import { IoLogoGithub } from "react-icons/io"
 
 const Footer = () => {
     return (
         <div>
-            <footer className="footer text-base-content p-10 flex justify-evenly bg-[#121212] text-white">
+            <footer className="footer text-base-content py-10 flex justify-evenly max-sm:flex-col max-sm:px-5 bg-[#121212] text-white">
                 <aside>
                     <img className="w-100% max-w-[80px]" src="https://res.cloudinary.com/dfyzxjsb5/image/upload/v1758793681/kausar_mia_rqlmol.png" alt="kausar" />
                     <p className="text-white">
@@ -13,10 +14,10 @@ const Footer = () => {
                         Providing reliable tech since 1992
                     </p>
                     <div className="flex gap-4 mt-4 text-white">
+                        <IoLogoGithub size={30}/>
                         <FaFacebookF size={30} />
                         <FaInstagram size={30}></FaInstagram>
                         <FaLinkedinIn size={30}></FaLinkedinIn >
-                        <BsTiktok size={30}></BsTiktok>
                     </div>
                 </aside>
                 <nav className="text-white">

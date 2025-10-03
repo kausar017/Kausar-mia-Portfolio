@@ -1,10 +1,17 @@
+import {
+  FaDownload,
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+} from "react-icons/fa";
+import { IoLogoGithub } from "react-icons/io";
 import { Typewriter } from "react-simple-typewriter";
 
 function Hero() {
   return (
-    <div className="hero bg-black text-white flex md:flex-col justify-around items-center ">
-      <div className="container flex justify-between items-center gap-10 px-5 ">
-        <div className="w-100% max-w-xl">
+    <div className="bg-black text-white flex md:flex-col justify-around items-center">
+      <div className="container flex justify-between items-center gap-10 px-5 max-xl:pt-8  max-lg:flex-col mx-lg:px-0 max-lg:pt-20">
+        <div className="w-100% max-w-xl" >
           <p className="text-xl font-semibold">Hi I'm</p>
           <h1 className="text-6xl font-bold mt-2">
             <span className="text-[#ED2519]">Kausar</span> Mia
@@ -30,9 +37,27 @@ function Hero() {
             designing) exceptional digital experiences. Currently, I'm focused
             on building responsive web applications.
           </p>
+          <div className="flex gap-4 my-4 text-white">
+            <a href="https://github.com/kausar017" target="_blank" rel="noreferrer">
+              <IoLogoGithub size={30} />
+            </a>
+            <a href="https://www.facebook.com/kausar017" target="_blank" rel="noreferrer">
+              <FaFacebookF size={30} />
+            </a>
+            <a href="https://www.instagram.com/md.kousar_mia/" target="_blank" rel="noreferrer">
+              <FaInstagram size={30} />
+            </a>
+            <a href="" target="_blank" rel="noreferrer">
+              <FaLinkedinIn size={30} />
+            </a>
+          </div>
           <div className="flex gap-4">
-            <button className="btn bg-[#ED2519] border-none text-white">Hire Me</button>
-            <button className="btn text-white bg-transparent hover:bg-white/20">Download CV</button>
+            <button className="btn bg-[#ED2519] border-none text-white hover:bg-white hover:text-black">
+              Hire Me
+            </button>
+            <button className="btn text-white bg-transparent hover:bg-white/20">
+              Download CV <FaDownload />
+            </button>
           </div>
         </div>
         <div>
