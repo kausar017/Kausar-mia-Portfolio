@@ -1,6 +1,9 @@
+import { FaPhoneAlt } from "react-icons/fa";
+import BlobCursor from "../../../Animation/BlobCursor";
+
 function About() {
   return (
-    <div className="bg-black text-white pt-20">
+    <div id="about" className="bg-black/95 text-white pt-20">
       <div>
         <h2 className="text-center text-3xl font-bold">About Me</h2>
         <p className="text-center mt-4 max-w-2xl mx-auto px-5 text-lg">
@@ -10,7 +13,7 @@ function About() {
           build things that make a difference.
         </p>
       </div>
-      <div className="container mx-auto flex justify-between items-center mt-5">
+      <div className="container mx-auto xl:flex lg:flex max-md:flex-col max-sm:flex-col justify-between items-center mt-5 max-sm:mt-5">
         <div>
           <img
             className="w-full"
@@ -18,7 +21,7 @@ function About() {
             alt="kauser-img"
           />
         </div>
-        <div className="w-100% max-w-2xl text-lg">
+        <div className="w-100% max-w-2xl text-lg text-justify px-3">
           <p className="mb-4">
             Hello! I’m Kausar Mia, a passionate and dedicated Front-End Web
             Developer from Mymensingh, Bangladesh. I’ve completed my Diploma in
@@ -46,6 +49,9 @@ function About() {
             and exploring creative ideas that inspire me to grow as both a
             developer and a person.
           </p>
+          <button className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none mt-6 ">
+            <FaPhoneAlt /> Contact Me
+          </button>
         </div>
       </div>
     </div>

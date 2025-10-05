@@ -38,9 +38,9 @@ function Header() {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-5 text-lg text-white font-semibold">
-                        <li className='hover:text-[#ed2519]'><a href='/'><IoMdHome />Home</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='#hero'><IoMdHome />Home</a></li>
                         <li className='hover:text-[#ed2519]'><a><IoSettingsSharp />Service</a></li>
-                        <li className='hover:text-[#ed2519]'><a><IoMdInformationCircle />About me</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='#about'><IoMdInformationCircle />About me</a></li>
                         <li className='hover:text-[#ed2519]'><a><AiFillProject />Portfolio</a></li>
                         <li className='hover:text-[#ed2519]'><a><IoMdContact/>Contact me</a></li>
                     </ul>
@@ -49,7 +49,7 @@ function Header() {
                     <div>
                         <input type="checkbox" className="toggle toggle-error" defaultChecked />
                     </div>
-                    <a className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none">Download CV <FaDownload /></a>
+                    <a className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none">Hire Me</a>
                 </div>
             </div>
         </div>
