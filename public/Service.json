@@ -8,25 +8,25 @@
   {
     "id": 2,
     "title": "Backend Development",
-    "image": "https://i.postimg.cc/2yQcqD1g/2c4669e7-7443-449b-bbf4-d31889065a78.png",
+    "image": "https://i.postimg.cc/Bvqt1cX6/2c4669e7-7443-449b-bbf4-d31889065a78.png",
     "description": "Secure and efficient server-side applications using Node.js and Express with database integration."
   },
   {
     "id": 3,
     "title": "API Integration",
-    "image": "https://i.postimg.cc/D0Rvz1bj/c55f5c83-97c9-40db-ba94-160d418ee3a7.png",
+    "image": "https://i.postimg.cc/YSpjmfhq/c55f5c83-97c9-40db-ba94-160d418ee3a7.png",
     "description": "Seamless integration of third-party APIs to make web applications dynamic and interactive."
   },
   {
     "id": 4,
     "title": "Fullstack Web Application",
-    "image": "https://i.postimg.cc/bJt8Bs5s/20251017-1044-Metallic-Web-Icon-simple-compose-01k7r7nms8ewpaywjpemrrhxk1-Photoroom.png",
+    "image": "https://i.postimg.cc/W42tJ6hp/20251017-1044-Metallic-Web-Icon-simple-compose-01k7r7nms8ewpaywjpemrrhxk1-Photoroom.png",
     "description": "End-to-end web solutions combining both frontend and backend technologies with proper deployment."
   },
   {
     "id": 5,
     "title": "Website Optimization",
-    "image": "https://i.postimg.cc/wxQnTXDT/20251017-1049-3-D-Optimization-Icon-simple-compose-01k7r7zdc7fdr91m6nqazhc3yb-Photoroom.png",
+    "image": "https://i.postimg.cc/Bvqt1cXS/20251017-1049-3-D-Optimization-Icon-simple-compose-01k7r7zdc7fdr91m6nqazhc3yb-Photoroom.png",
     "description": "Improving website performance, loading speed, and SEO for better user experience and visibility."
   },
   {
