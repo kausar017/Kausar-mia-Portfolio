@@ -34,7 +34,7 @@ function Header() {
                             <li><a>Contact me</a></li>
                         </ul>
                     </div>
-                    <a className="text-xl text-[#f03613]"><img className='w-100% max-w-28' src="https://res.cloudinary.com/dfyzxjsb5/image/upload/v1758793681/kausar_mia_rqlmol.png" alt="kauser" /></a>
+                    <a className="text-xl text-[#f03613]"><img className='w-100% max-w-28' src="https://i.postimg.cc/SxrqzBBZ/download.png" alt="kauser" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-5 text-lg text-white font-semibold">

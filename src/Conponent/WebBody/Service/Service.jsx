@@ -4,7 +4,7 @@ function Service() {
   const [ServiceData, setServiceData] = useState([]);
 
   useEffect(() => {
-    fetch("/public/Service.json")
+    fetch("/Service.json")
       .then((res) => res.json())
       .then((data) => setServiceData(data))
       .catch((error) => console.error(error));
