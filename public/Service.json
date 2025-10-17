@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "title": "Frontend Development",
+    "image": "https://i.postimg.cc/NG2hTG27/a3cef7d6-835d-4ad9-bb8a-77c2129fb065.png",
+    "description": "Modern and responsive website UI built with React, Tailwind CSS, and JavaScript for a smooth user experience."
+  },
+  {
+    "id": 2,
+    "title": "Backend Development",
+    "image": "https://i.postimg.cc/2yQcqD1g/2c4669e7-7443-449b-bbf4-d31889065a78.png",
+    "description": "Secure and efficient server-side applications using Node.js and Express with database integration."
+  },
+  {
+    "id": 3,
+    "title": "API Integration",
+    "image": "https://i.postimg.cc/D0Rvz1bj/c55f5c83-97c9-40db-ba94-160d418ee3a7.png",
+    "description": "Seamless integration of third-party APIs to make web applications dynamic and interactive."
+  },
+  {
+    "id": 4,
+    "title": "Fullstack Web Application",
+    "image": "https://i.postimg.cc/bJt8Bs5s/20251017-1044-Metallic-Web-Icon-simple-compose-01k7r7nms8ewpaywjpemrrhxk1-Photoroom.png",
+    "description": "End-to-end web solutions combining both frontend and backend technologies with proper deployment."
+  },
+  {
+    "id": 5,
+    "title": "Website Optimization",
+    "image": "https://i.postimg.cc/wxQnTXDT/20251017-1049-3-D-Optimization-Icon-simple-compose-01k7r7zdc7fdr91m6nqazhc3yb-Photoroom.png",
+    "description": "Improving website performance, loading speed, and SEO for better user experience and visibility."
+  },
+  {
+    "id": 6,
+    "title": "Figma to HTML Conversion",
+    "image": "https://i.postimg.cc/fbxQc6S5/20251017-1053-Figma-to-HTML-Icon-simple-compose-01k7r852dhee78cj4t4587khy8-Photoroom.png",
+    "description": "Pixel-perfect conversion of Figma design files into fully responsive HTML, CSS, and JavaScript code."
+  },
+  {
+    "id": 7,
+    "title": "CMS Website with Squarespace",
+    "image": "https://i.postimg.cc/pVKk2Pb8/20251017-1107-3-D-Squarespace-Icon-simple-compose-01k7r908e1fjmvn881y3197fnh-Photoroom.png",
+    "description": "Professional website design and customization using Squarespace CMS with SEO-friendly and responsive layouts."
+  },
+  {
+    "id": 8,
+    "title": "Unique, Clean and Modern Design",
+    "image": "https://i.postimg.cc/2SWSt9B5/3d6f82af-32fe-43ef-88b4-0a0e978d0ca6.png",
+    "description": "Creating visually appealing, clean, and modern designs that represent your brand identity and engage users effectively."
+  }
+]

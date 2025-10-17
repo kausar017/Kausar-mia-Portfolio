@@ -8,6 +8,7 @@ import { IoLogoGithub } from "react-icons/io";
 import { Typewriter } from "react-simple-typewriter";
 import About from "../About/About";
 import Particles from "../../../Animation/Particles";
+import Service from "../Service/Service";
 
 function Hero() {
   return (
@@ -87,7 +88,16 @@ function Hero() {
               />
             </div>
           </div>
-          <div style={{ position: "absolute", top: 0, left: 0, zIndex: 0, width: "100%", height: "100%" }}>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              zIndex: 0,
+              width: "100%",
+              height: "100%",
+            }}
+          >
             <Particles
               particleColors={["#ffffff", "#ffffff"]}
               particleCount={300}
@@ -102,9 +112,11 @@ function Hero() {
         </div>
       </div>
 
-      {/* about section  */}
       <section>
+        {/* about section  */}
         <About></About>
+        {/* service section */}
+        <Service></Service>
       </section>
     </>
   );
