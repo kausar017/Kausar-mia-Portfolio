@@ -1,0 +1,40 @@
+I Creation Responsive Navbar in Next.js
+
+I built a responsive Navbar using Next.js, Tailwind CSS, and ShadCN UI. It includes a logo, navigation links (Home, Courses, About, Dashbord), and a sign-up button. The navigation is handled using Next.js's Link component, and styling is done with Tailwind CSS for a modern look.
+
+One challenge I faced was with Lucide-React icons, but I resolved it by properly importing the Link component. This project helped me understand Next.js routing, component structuring, and responsive UI design. I plan to deploy it on Vercel for a live preview.
+
+
+
+It's not about ego". যেখানে আমি ignore বা unwanted feel করি, আমি সেখান থেকে সরে আসি। No matter আমরা কতটুকু close"😅❤️‍🩹
+
+আল্লাহ দিয়েও পরিক্ষা করেন। আবার কেড়েও পরিক্ষা করেন। আল্লাহ যেটা দেন সেটা নেয়ামত। যেটা দেন না সেটা হিকমত।
+যেটা দিয়ে আবার নিয়ে নেন সেটা পরীক্ষা। ধৈর্যের পর যেটা দেন সেটা কুদরত:)
+
+
+Larning point
+======================
+TypeScript, Next.js , Express.js, RESTful API & GraphQL, Docker basic, github, Unit & Integration Testing, 
+
+Authentication & Security (OAuth, JWT, bcrypt) , 
+SQL Databases (PostgreSQL, MySQL) basic, 
+English speaking
+cypress testing
+JEST
+======================
+
+
+[OPENAI_API_KEY_REDACTED]
+
+chatbot preserntion text:
+=============================
+title: I creating the chat boot
+This AI Chatbot is an interactive chat application that uses the GPT-2 API to respond to user messages. It features a clean and user-friendly UI where user and bot messages are displayed separately.
+
+If the bot's response is delayed, it shows "Analyzing..." to indicate processing, reducing user frustration. The API integration ensures smooth communication, and in case of errors, it displays "⚠️ API Error! Try again later."
+
+Future improvements could include upgrading to GPT-4, adding voice input, and supporting multiple languages. The chatbot aims to provide smart, automated, and seamless communication for users, enhancing their chatting experience. 🚀
+
+Kausar/ asrafull= instractor/ rohole=dashboard/antor=addc-myco/zolil/tareq
+
+thansk you all, now I requested plore the asrafull by please shere youre presention

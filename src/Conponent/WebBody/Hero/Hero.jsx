@@ -9,6 +9,7 @@ import { Typewriter } from "react-simple-typewriter";
 import About from "../About/About";
 import Particles from "../../../Animation/Particles";
 import Service from "../Service/Service";
+import Portfolio from "../Portfolio/Portfolio";
 
 function Hero() {
   return (
@@ -16,7 +17,7 @@ function Hero() {
       <div>
         <div
           id="hero"
-          className="text-white flex md:flex-col bg-black justify-center items-center"
+          className="text-base-content flex md:flex-col bg-base-100 justify-center items-center"
         >
           <div className="container flex justify-between items-center gap-10 px-5 max-xl:pt-8  max-lg:flex-col mx-lg:px-0 max-lg:pt-20">
             <div className="w-100% max-w-xl">
@@ -45,11 +46,12 @@ function Hero() {
                 occasionally designing) exceptional digital experiences.
                 Currently, I'm focused on building responsive web applications.
               </p>
-              <div className="flex gap-4 my-4 text-white">
+              <div className="flex gap-4 my-4 text-base-content">
                 <a
                   href="https://github.com/kausar017"
                   target="_blank"
                   rel="noreferrer"
+                  className="z-10"
                 >
                   <IoLogoGithub size={30} />
                 </a>
@@ -57,6 +59,7 @@ function Hero() {
                   href="https://www.facebook.com/kausar017"
                   target="_blank"
                   rel="noreferrer"
+                  className="z-10"
                 >
                   <FaFacebookF size={30} />
                 </a>
@@ -64,27 +67,34 @@ function Hero() {
                   href="https://www.instagram.com/md.kousar_mia/"
                   target="_blank"
                   rel="noreferrer"
+                  className="z-10"
                 >
                   <FaInstagram size={30} />
                 </a>
-                <a href="" target="_blank" rel="noreferrer">
+                <a href="https://www.linkedin.com/in/kausar-mia-developer/" target="_blank" rel="noreferrer" className="z-10">
                   <FaLinkedinIn size={30} />
                 </a>
               </div>
-              <div className="flex gap-4">
-                <button className="btn bg-[#ED2519] border-none text-white hover:bg-white hover:text-black">
+              <div className="flex gap-4 z-10">
+                <a
+                  href="#"
+                  className="btn bg-[#ED2519] border-none text-white hover:bg-white hover:text-black z-10"
+                >
                   Hire Me
-                </button>
-                <button className="btn text-white bg-transparent hover:bg-white/20">
+                </a>
+                <a
+                  href="#"
+                  className="btn text-white bg-transparent border border-white hover:bg-[#ED2519] z-10"
+                >
                   Download CV <FaDownload />
-                </button>
+                </a>
               </div>
             </div>
             <div>
               <img
                 src="https://i.postimg.cc/QNBhzf6d/fg.png"
                 alt="kausar"
-                className="relative z-10"
+                className="relative z-10 w-full max-w-2xl"
               />
             </div>
           </div>
@@ -117,6 +127,8 @@ function Hero() {
         <About></About>
         {/* service section */}
         <Service></Service>
+        {/* portfolio section */}
+        <Portfolio></Portfolio>
       </section>
     </>
   );

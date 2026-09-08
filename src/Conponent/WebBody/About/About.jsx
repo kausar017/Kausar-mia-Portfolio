@@ -3,7 +3,7 @@ import BlobCursor from "../../../Animation/BlobCursor";
 
 function About() {
   return (
-    <div id="about" className="bg-black/95 text-white pt-20">
+    <div id="about" className="bg-base-200 text-base-content pt-20">
       <div>
         <h2 className="text-center text-3xl font-bold">About Me</h2>
         <p className="text-center mt-4 max-w-2xl mx-auto px-5 text-lg">

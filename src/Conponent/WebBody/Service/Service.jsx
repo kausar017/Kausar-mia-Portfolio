@@ -14,14 +14,14 @@ function Service() {
 
   return (
     <>
-      <div className="bg-black text-white py-20">
+      <div className="bg-base-100 text-base-content py-20">
         <div className="text-3xl font-bold text-center">Our Service</div>
 
         <div className="container mx-auto grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-6 justify-items-center mt-10 px-5">
           {ServiceData.map((data, index) => (
             <div
               key={index}
-              className="card w-full max-w-96 bg-[#0D0D0D] shadow-2xl mx-auto hover:scale-105 transition-transform duration-300 cursor-pointer"
+              className="card w-full max-w-96 bg-base-200 shadow-2xl mx-auto hover:scale-105 transition-all duration-500 cursor-pointer hover:shadow-[2px_2px_10px_5px_rgba(237,37,25,0.8)]"
             >
               <figure className="px-10 pt-10">
                 <img

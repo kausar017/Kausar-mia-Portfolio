@@ -1,0 +1,84 @@
+AI Chatbot Presentation
+(For ACCA & General Knowledge Support)
+
+1. Introduction
+What it is: An AI-powered virtual assistant that provides instant answers.
+
+Purpose: To deliver accurate information on ACCA and general topics in both English & Bangla.
+
+2. Key Features
+✔ Multilingual (Supports English & Bangla)
+✔ 24/7 Availability (Instant responses)
+✔ Wide Knowledge Base: ACCA syllabus, exam tips, finance, science, health, and more.
+✔ User-Friendly Interface (Built with Next.js + Shadcn UI)
+
+3. How It Works
+1️⃣ Input: User asks a question (text input or quick-select buttons).
+2️⃣ Processing: Uses Google’s Gemini AI to analyze queries.
+3️⃣ Output: Generates accurate answers in 2-3 seconds.
+
+4. Benefits
+For ACCA Students: Exam structure, fees, study tips.
+
+For Professionals: Career guidance, financial concepts.
+
+For Everyone: General knowledge on science, tech, health, etc.
+
+5. Technical Stack
+Frontend: Next.js, Shadcn UI
+
+Backend: Google Gemini API
+
+Deployment: Vercel/Netlify
+
+6. Why Choose This Chatbot?
+🚀 Fast & Reliable
+🌍 Global & Local Support (ACCA + Bangla queries)
+💡 Interactive Learning
+
+
+
+
+
+HelpDesk Platform - Quick Overview
+Core Features
+✅ Content Creation
+
+Text, image & video posts
+
+Instant Cloudinary uploads
+
+Rich text formatting
+
+✅ Social Interactions
+
+Like/comment/share posts
+
+Real-time notifications
+
+User profile integration
+
+✅ Technical Highlights
+
+Next.js 14 (App Router)
+
+Optimistic UI updates
+
+Dark/light mode toggle
+
+Responsive design
+
+Key Numbers
+⏱️ 1.5s average post load time
+
+📊 Supports 10,000+ monthly users
+
+🖼️ Handles 500MB+ media daily
+
+Demo Ready
+Show dark/light mode switch
+
+Demo video upload + preview
+
+Demonstrate instant likes (no refresh)
+

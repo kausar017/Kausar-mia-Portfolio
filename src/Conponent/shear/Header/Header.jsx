@@ -1,12 +1,23 @@
-import React from 'react'
+import { useEffect, useState } from 'react'
 import { AiFillProject } from 'react-icons/ai'
 import { FaDownload } from 'react-icons/fa'
 import { IoMdContact, IoMdHome, IoMdInformationCircle } from 'react-icons/io'
 import { IoSettingsSharp } from 'react-icons/io5'
 
 function Header() {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+        const savedTheme = localStorage.getItem('theme')
+        return savedTheme ? savedTheme === 'dark' : true
+    })
+
+    useEffect(() => {
+        const theme = isDarkMode ? 'dark' : 'light'
+        document.documentElement.setAttribute('data-theme', theme)
+        localStorage.setItem('theme', theme)
+    }, [isDarkMode])
+
     return (
-        <div className='bg-[#121212] text-primary-content sticky top-0 z-50 box-shadow-lg'>
+        <div className='bg-base-300 text-base-content sticky top-0 z-50 box-shadow-lg'>
             <div className="navbar container mx-auto">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -26,7 +37,7 @@ function Header() {
                         </div>
                         <ul
                             tabIndex={0}
-                            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-gray-800 text-primary-content">
+                            className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-base-200 text-base-content">
                             <li><a>Home</a></li>
                             <li><a>Service</a></li>
                             <li><a>About me</a></li>
@@ -37,7 +48,7 @@ function Header() {
                     <a className="text-xl text-[#f03613]"><img className='w-100% max-w-28' src="https://i.postimg.cc/SxrqzBBZ/download.png" alt="kauser" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-5 text-lg text-white font-semibold">
+                    <ul className="menu menu-horizontal px-5 text-lg text-base-content font-semibold">
                         <li className='hover:text-[#ed2519]'><a href='#hero'><IoMdHome />Home</a></li>
                         <li className='hover:text-[#ed2519]'><a><IoSettingsSharp />Service</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#about'><IoMdInformationCircle />About me</a></li>
@@ -47,7 +58,13 @@ function Header() {
                 </div>
                 <div className="navbar-end gap-4 flex items-center">
                     <div>
-                        <input type="checkbox" className="toggle toggle-error" defaultChecked />
+                        <input
+                            type="checkbox"
+                            className="toggle toggle-error"
+                            checked={isDarkMode}
+                            onChange={(event) => setIsDarkMode(event.target.checked)}
+                            aria-label="Toggle dark mode"
+                        />
                     </div>
                     <a className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none">Hire Me</a>
                 </div>
