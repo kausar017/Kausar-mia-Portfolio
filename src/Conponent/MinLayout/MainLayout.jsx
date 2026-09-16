@@ -5,7 +5,7 @@ import BlobCursor from "../../Animation/BlobCursor";
 
 function MainLayout() {
   return (
-    <div className="">
+    <div className="overflow-x-hidden">
       {/* navbar */}
       <Header></Header>
       <div className="min-h-[calc(100vh-100px)]">

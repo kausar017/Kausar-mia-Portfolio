@@ -3,25 +3,23 @@ import BlobCursor from "../../../Animation/BlobCursor";
 
 function About() {
   return (
-    <div id="about" className="bg-base-200 text-base-content pt-20">
+    <div id="about" className="bg-base-100 px-5 pt-16 text-base-content sm:pt-20">
       <div>
         <h2 className="text-center text-3xl font-bold">About Me</h2>
-        <p className="text-center mt-4 max-w-2xl mx-auto px-5 text-lg">
-          I'm a passionate frontend developer with a knack for creating
-          interactive and user-friendly web applications. My journey in web
-          development began with a curiosity for technology and a desire to
-          build things that make a difference.
+        <p className="text-center mt-4 max-w-xl mx-auto px-5 text-md">
+          Passionate Frontend Developer creating interactive, responsive, and user-friendly web applications with modern technologies.
+
         </p>
       </div>
-      <div className="container mx-auto xl:flex lg:flex max-md:flex-col max-sm:flex-col justify-between items-center mt-5 max-sm:mt-5">
-        <div>
+      <div className="mx-auto mt-8 flex w-full max-w-[1200px] flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12">
+        <div className="w-full max-w-xl">
           <img
-            className="w-full"
+            className="mx-auto w-full max-w-xl"
             src="https://i.postimg.cc/QNBhzf6d/fg.png"
             alt="kauser-img"
           />
         </div>
-        <div className="w-100% max-w-2xl text-lg text-justify px-3">
+        <div className="w-full max-w-[600px] text-justify text-base leading-relaxed sm:text-lg">
           <p className="mb-4">
             Hello! I’m Kausar Mia, a passionate and dedicated Front-End Web
             Developer from Mymensingh, Bangladesh. I’ve completed my Diploma in

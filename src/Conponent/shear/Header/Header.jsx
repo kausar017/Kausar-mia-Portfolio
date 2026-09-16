@@ -18,7 +18,7 @@ function Header() {
 
     return (
         <div className='bg-base-300 text-base-content sticky top-0 z-50 box-shadow-lg'>
-            <div className="navbar container mx-auto">
+            <div className="navbar w-full max-w-[1200px] mx-auto px-3 py-2 sm:px-5 sm:py-4">
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -45,10 +45,10 @@ function Header() {
                             <li><a>Contact me</a></li>
                         </ul>
                     </div>
-                    <a className="text-xl text-[#f03613]"><img className='w-100% max-w-28' src="https://i.postimg.cc/SxrqzBBZ/download.png" alt="kauser" /></a>
+                    <a className="shrink-0 text-xl text-[#f03613]"><img className='w-20 sm:w-24' src="https://i.postimg.cc/SxrqzBBZ/download.png" alt="kauser" /></a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-5 text-lg text-base-content font-semibold">
+                    <ul className="menu menu-horizontal px-5 text-md text-base-content font-semibold">
                         <li className='hover:text-[#ed2519]'><a href='#hero'><IoMdHome />Home</a></li>
                         <li className='hover:text-[#ed2519]'><a><IoSettingsSharp />Service</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#about'><IoMdInformationCircle />About me</a></li>
@@ -56,7 +56,7 @@ function Header() {
                         <li className='hover:text-[#ed2519]'><a><IoMdContact/>Contact me</a></li>
                     </ul>
                 </div>
-                <div className="navbar-end gap-4 flex items-center">
+                <div className="navbar-end flex items-center gap-2 sm:gap-4">
                     <div>
                         <input
                             type="checkbox"
@@ -66,7 +66,7 @@ function Header() {
                             aria-label="Toggle dark mode"
                         />
                     </div>
-                    <a className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none">Hire Me</a>
+                    <a href="#contact" className="btn btn-sm border-none bg-[#ed2519] px-3 text-sm text-white hover:bg-white hover:text-black sm:px-6 sm:py-5">Hire Me</a>
                 </div>
             </div>
         </div>

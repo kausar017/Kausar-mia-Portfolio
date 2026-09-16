@@ -1,0 +1,86 @@
+[
+  {
+    "title": "R4 Construction — Website Design & Development",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/r4.gif",
+    "description": "Designed and developed a professional, modern website for R4 Construction, an Arizona-based residential and commercial construction company. The website focuses on presenting construction services, building trust with potential customers, and generating consultation and quote requests. Key features include responsive design, service-focused structure, restoration, rehab, remodeling and roofing sections, residential and commercial construction sections, free inspection and consultation CTAs, contact and quote-request functionality, trust-building sections, custom layouts, and conversion-focused navigation.",
+    "link": "https://www.r4arizona.com/",
+    "projectType": "cms"
+  },
+  {
+    "title": "The Professional Builder — HubSpot Landing Page & Conversion Funnel",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/Two6.gif",
+    "description": "Designed and developed a conversion-focused landing page for The Professional Builder using HubSpot CMS, promoting a live Sales WOW Pack workshop for residential building and construction business owners. The project includes responsive design, workshop registration form integration, strong CTAs, workshop benefits and outcomes, social proof, founder profile integration, video content, custom layouts, responsive adjustments, and cross-device UI optimization.",
+    "link": "https://www.two6.co.uk",
+    "projectType": "cms"
+  },
+  {
+    "title": "Food Link — Food Donation Management System",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/FoodLink.gif",
+    "description": "Developed a full-stack Food Donation Management System designed to connect food donors and recipients through an intuitive web platform. Built a responsive frontend with React.js and Tailwind CSS, RESTful APIs with Node.js and Express.js, and MongoDB data management. Features include food donation creation, viewing and updating, search and sorting, detailed donation pages, user-specific food requests, Axios API communication, form validation, error handling, responsive layouts, and Netlify deployment.",
+    "link": "https://b10-a11-food-link-project.netlify.app/",
+    "projectType": "react"
+  },
+  {
+    "title": "Gadget Heaven — E-Commerce Platform",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/gitgat.gif",
+    "description": "Developed a modern full-stack e-commerce platform for browsing, reviewing, and purchasing electronic gadgets. Features include a responsive React.js interface, product catalog, category browsing, detailed product pages, product search, shopping cart, checkout, authentication, JWT security, product reviews and ratings, order creation and history, payment gateway integration, RESTful APIs, MongoDB, React Router, and responsive desktop, tablet, and mobile layouts.",
+    "link": "https://gedgat-heven-a8.netlify.app",
+    "projectType": "react"
+  },
+  {
+    "title": "Eco Explorer — Sustainable Travel & Tourism Platform",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/Home_EcoExplorar-ezgif.com-gif-maker.gif",
+    "description": "Developed a responsive travel platform focused on eco-friendly destinations, sustainable tourism, and winter travel experiences. Built with React.js and featuring a winter-themed nature-focused UI, responsive layouts, Swiper image carousels, AOS animations, video background, Firebase authentication, real-time data functionality, React Router navigation, Tailwind CSS, and DaisyUI.",
+    "link": "https://eco-explorer-assingment9.netlify.app/",
+    "projectType": "react"
+  },
+  {
+    "title": "The Wisdom Table™ Global Legacy Tour",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/TheWisdom.gif",
+    "description": "Designed and developed a professional premium Squarespace website for The Wisdom Table™ Global, a global leadership and business ecosystem connecting visionary leaders, entrepreneurs, investors, and families across international markets. The website presents the organization's mission, leadership network, strategic pillars, delegate experience, Ghana Legacy Tour, sponsorship opportunities, networking programs, newsletter integration, leadership showcase, image and video content, and conversion-focused CTAs.",
+    "link": "https://www.wisdomtableglobal.com",
+    "projectType": "cms"
+  },
+  {
+    "title": "JRH Deal Walk — Bubble.io Web Application",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/Bubble_No-codeapps.gif",
+    "description": "Built and customized a Bubble.io web application for a client project, focusing on creating a functional, user-friendly, and responsive digital experience. Contributions included Bubble.io application development, responsive UI design, custom layouts, reusable elements, workflow logic, forms, user interactions, database configuration, navigation, UX optimization, testing, debugging, and client-requested feature implementation. The project is currently in development.",
+    "link": "https://jrh-deal-walk-46751.bubbleapps.io/version-test",
+    "projectType": "cms"
+  },
+  {
+    "title": "Real Estate Platform — Bubble.io",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/Bubble_No.gif",
+    "description": "Designed and developed a modern real estate platform using Bubble.io, focused on property discovery, property listings, lead generation, and seamless user experience. Features include a dark-themed UI, responsive property listings, featured properties, pricing and location information, property search and discovery, category and location-based presentation, testimonials, partner showcase, real estate news, lead-generation CTAs, newsletter subscription, reusable Bubble components, responsive design, database-driven content, and dynamic elements.",
+    "link": "https://beautify-71318.bubbleapps.io/version-test/",
+    "projectType": "cms"
+  },
+  {
+    "title": "Sam Glenn — Squarespace Website Design & Development",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/Motivationa.gif",
+    "description": "Designed and developed a professional, conversion-focused Squarespace website for Sam Glenn, a motivational keynote speaker and live performance artist. The website showcases keynote speaking, live painting performances, leadership and workplace engagement programs, books, testimonials, and event booking opportunities. Features include responsive design, professional homepage structure, keynote and performance sections, event booking CTAs, testimonials, video integration, custom styling, and optimized navigation.",
+    "link": "https://kazoo-lily-3mxk.squarespace.com/",
+    "projectType": "cms"
+  },
+  {
+    "title": "Hat Creek Generators — Squarespace Website Design & Development",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/HatCreek.gif?updatedAt=1789572912272",
+    "description": "Designed and developed a professional responsive website for Hat Creek Generator Services, an Australia-based generator and electrical solutions company. The website showcases generator services, products, electrical capabilities, and power solutions. Features include generator sales and rental sections, installation and electrical integration, servicing and maintenance, power logging, load analysis, commercial and industrial electrical services, product catalog, generator specifications, contact CTAs, custom layouts, and conversion-focused structure.",
+    "link": "https://www.hatcreekgenerators.com.au",
+    "projectType": "cms"
+  },
+  {
+    "title": "Desi Food Fix — Squarespace Website Design & Development",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/HonestSouthAsian.gif",
+    "description": "Designed and developed a modern editorial-style Squarespace website for Desi Food Fix, a platform focused on South Asian food reviews, restaurant recommendations, city guides, and food culture. Features include city-based restaurant discovery, restaurant reviews, featured dishes, blog and editorial content, newsletter integration, contact and collaboration sections, image-rich presentation, responsive design, custom layouts, user-friendly navigation, and conversion-focused CTAs.",
+    "link": "https://www.desifoodfix.com/",
+    "projectType": "cms"
+  },
+  {
+    "title": "Postify — Social Media Content & Marketing Web Platform",
+    "image": "https://ik.imagekit.io/3n2eqtqw5/FoodLink_Contact-.gif",
+    "description": "Developed a responsive social media-style web application using React.js, featuring post management, comments, feedback reporting, and admin moderation capabilities. Features include create, edit, and delete posts, REST API integration, React Query state management, comment management, comment reporting, duplicate-report prevention, Read More modal, admin dashboard, reported comment search and filtering, admin delete/warn/ban actions, responsive admin interfaces, error handling, notifications, accessibility, and user-friendly interactions.",
+    "link": "https://postify-foram-web.netlify.app",
+    "projectType": "react"
+  }
+]

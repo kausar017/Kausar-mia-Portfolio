@@ -10,6 +10,8 @@ import About from "../About/About";
 import Particles from "../../../Animation/Particles";
 import Service from "../Service/Service";
 import Portfolio from "../Portfolio/Portfolio";
+import ClientReview from "../ClientReview/ClientReview";
+import LogoSlide from "../LogoSlide/LogoSlide";
 
 function Hero() {
   return (
@@ -17,9 +19,9 @@ function Hero() {
       <div>
         <div
           id="hero"
-          className="text-base-content flex md:flex-col bg-base-100 justify-center items-center"
+          className="text-base-content flex md:flex-col bg-base-100 bg-gradient-to-br from-[#ed2519]/10 via-transparent to-transparent justify-center items-center"
         >
-          <div className="container flex justify-between items-center gap-10 px-5 max-xl:pt-8  max-lg:flex-col mx-lg:px-0 max-lg:pt-20">
+          <div className="w-full max-w-[1200px] flex justify-between items-center gap-10 px-5 max-xl:pt-8 max-lg:flex-col mx-lg:px-0 max-lg:pt-20">
             <div className="w-100% max-w-xl">
               <p className="text-xl font-semibold">Hi I'm</p>
               <h1 className="text-6xl font-bold mt-2">
@@ -83,7 +85,8 @@ function Hero() {
                   Hire Me
                 </a>
                 <a
-                  href="#"
+                  href="public/CV/Kausar_Mia_CV.pdf"
+                  download
                   className="btn text-white bg-transparent border border-white hover:bg-[#ED2519] z-10"
                 >
                   Download CV <FaDownload />
@@ -93,42 +96,27 @@ function Hero() {
             <div>
               <img
                 src="https://i.postimg.cc/QNBhzf6d/fg.png"
+                // src="https://i.postimg.cc/13bPggS7/control-loop.gif"
                 alt="kausar"
-                className="relative z-10 w-full max-w-2xl"
+                className="relative z-10 w-full max-w-3xl mt-10"
               />
             </div>
           </div>
-          <div
-            style={{
-              position: "absolute",
-              top: 0,
-              left: 0,
-              zIndex: 0,
-              width: "100%",
-              height: "100%",
-            }}
-          >
-            <Particles
-              particleColors={["#ffffff", "#ffffff"]}
-              particleCount={300}
-              particleSpread={10}
-              speed={0.1}
-              particleBaseSize={200}
-              moveParticlesOnHover={true}
-              alphaParticles={false}
-              disableRotation={false}
-            />
-          </div>
+        
         </div>
       </div>
 
       <section>
-        {/* about section  */}
-        <About></About>
         {/* service section */}
         <Service></Service>
+        {/* about section  */}
+        <About></About>
+        {/* logo slide section */}
+        <LogoSlide></LogoSlide>
         {/* portfolio section */}
         <Portfolio></Portfolio>
+        {/* client review section */}
+        <ClientReview></ClientReview>
       </section>
     </>
   );
