@@ -7,7 +7,7 @@ import {
 import { IoLogoGithub } from "react-icons/io";
 import { Typewriter } from "react-simple-typewriter";
 import About from "../About/About";
-import Particles from "../../../Animation/Particles";
+import DotField from "../../../Animation/DotField";
 import Service from "../Service/Service";
 import Portfolio from "../Portfolio/Portfolio";
 import ClientReview from "../ClientReview/ClientReview";
@@ -19,9 +19,24 @@ function Hero() {
       <div>
         <div
           id="hero"
-          className="text-base-content flex md:flex-col bg-base-100 bg-gradient-to-br from-[#ed2519]/10 via-transparent to-transparent justify-center items-center"
+          className="relative flex items-center justify-center overflow-hidden bg-base-100 bg-gradient-to-br from-[#ed2519]/10 via-transparent to-transparent text-base-content md:flex-col"
         >
-          <div className="w-full max-w-[1200px] flex justify-between items-center gap-10 px-5 max-xl:pt-8 max-lg:flex-col mx-lg:px-0 max-lg:pt-20">
+          <DotField
+            dotRadius={1.5}
+            dotSpacing={14}
+            bulgeStrength={45}
+            glowRadius={110}
+            sparkle={false}
+            waveAmplitude={0}
+            cursorRadius={500}
+            cursorForce={0.1}
+            bulgeOnly
+            gradientFrom="rgba(237, 37, 25, 0.35)"
+            gradientTo="rgba(252, 165, 165, 0.25)"
+            glowColor="rgba(0, 0, 0, 0.45)"
+            className="pointer-events-none z-0"
+          />
+          <div className="relative z-10 w-full max-w-[1200px] flex justify-between items-center gap-10 px-5 max-xl:pt-8 max-lg:flex-col mx-lg:px-0 max-lg:pt-20">
             <div className="w-100% max-w-xl">
               <p className="text-xl font-semibold">Hi I'm</p>
               <h1 className="text-6xl font-bold mt-2">

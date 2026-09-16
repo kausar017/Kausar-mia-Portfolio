@@ -45,9 +45,12 @@ const Portfolio = () => {
           textColor="inherit"
           textSize="2xl"
           indicatorColor="error"
-          variant="scrollable"
-          allowScrollButtonsMobile
           centered
+          sx={{
+            "& .MuiTabs-flexContainer": {
+              justifyContent: "center",
+            },
+          }}
           className="hover: text-red-700"
         >
           <Tab label="All" sx={{ fontSize: "20px" }} />
