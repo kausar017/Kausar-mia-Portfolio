@@ -1,23 +1,29 @@
-import { BsTiktok } from "react-icons/bs";
+import { useState } from "react";
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
+import { Mail, MapPin, MessageCircle } from "lucide-react";
 
 const Footer = () => {
+  const [subscribed, setSubscribed] = useState(false);
+
+  const handleSubscribe = (event) => {
+    event.preventDefault();
+    setSubscribed(true);
+  };
+
   return (
     <div className="bg-base-300 text-base-content">
-      <footer className="container mx-auto grid grid-cols-1 gap-8 px-5 py-10 sm:grid-cols-2 lg:grid-cols-12">
-        <aside className="col-span-1 lg:col-span-4">
+      <footer className="mx-auto grid w-full max-w-[1200px] grid-cols-1 gap-8 px-5 py-10 text-center sm:grid-cols-2 sm:text-left lg:grid-cols-4">
+        <aside className="flex flex-col items-center sm:items-start">
           <img
-            className="w-100% max-w-[80px]"
+            className="w-20"
             src="https://i.postimg.cc/SxrqzBBZ/download.png"
             alt="kausar"
           />
-          <p>
-            ACME Industries Ltd.
-            <br />
-            Providing reliable tech since 1992
+          <p className="mt-2 text-sm text-base-content/70">
+            Kausar Mia · Frontend Developer
           </p>
-          <div className="flex gap-4 mt-4">
+          <div className="mt-4 flex gap-4">
             <a href="https://github.com/kausar017" target="_blank" rel="noreferrer">
               <IoLogoGithub size={30} />
             </a>
@@ -32,35 +38,55 @@ const Footer = () => {
             </a>
           </div>
         </aside>
-        <div className="col-span-1 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">
-          <nav className="flex flex-col">
-            <h6 className="footer-title">Resources</h6>
-            <a className="link link-hover">Blog</a>
-            <a className="link link-hover">Documentation</a>
-            <a className="link link-hover">Tutorials</a>
-          </nav>
-          <nav className="flex flex-col">
-            <h6 className="footer-title">Services</h6>
-            <a className="link link-hover">Branding</a>
-            <a className="link link-hover">Design</a>
-            <a className="link link-hover">Marketing</a>
-            <a className="link link-hover">Advertisement</a>
-          </nav>
-          <nav className="flex flex-col">
-            <h6 className="footer-title">Company</h6>
-            <a className="link link-hover">About us</a>
-            <a className="link link-hover">Contact</a>
-            <a className="link link-hover">Jobs</a>
-            <a className="link link-hover">Press kit</a>
-          </nav>
-          <nav className="flex flex-col">
-            <h6 className="footer-title">Legal</h6>
-            <a className="link link-hover">Terms of use</a>
-            <a className="link link-hover">Privacy policy</a>
-            <a className="link link-hover">Cookie policy</a>
-          </nav>
+
+        <nav className="flex flex-col items-center gap-2 sm:items-start">
+          <h3 className="mb-2 font-semibold">Quick Links</h3>
+          <a href="#hero" className="link link-hover text-sm">Home</a>
+          <a href="#about" className="link link-hover text-sm">About Me</a>
+          <a href="#portfolio" className="link link-hover text-sm">Portfolio</a>
+        </nav>
+
+        <div className="flex flex-col items-center gap-2 sm:items-start">
+          <h3 className="mb-2 font-semibold">Contact Us</h3>
+          <a href="mailto:mdkousarmia71@gmail.com" className="flex items-center gap-2 link link-hover text-sm">
+            <Mail size={15} className="shrink-0 text-[#ed2519]" />
+            mdkousarmia71@gmail.com
+          </a>
+          <a href="https://wa.me/8801786876781" target="_blank" rel="noreferrer" className="flex items-center gap-2 link link-hover text-sm">
+            <MessageCircle size={15} className="shrink-0 text-[#ed2519]" />
+            01786876781 (WhatsApp)
+          </a>
+          <p className="flex items-center gap-2 text-sm text-base-content/70">
+            <MapPin size={15} className="shrink-0 text-[#ed2519]" />
+            Mymensingh, Bangladesh
+          </p>
+          <a href="https://www.linkedin.com/in/kausar-mia-developer/" target="_blank" rel="noreferrer" className="flex items-center gap-2 link link-hover text-sm">
+            <FaLinkedinIn size={15} className="shrink-0 text-[#ed2519]" />
+            Message on LinkedIn
+          </a>
+        </div>
+
+        <div>
+          <h3 className="mb-2 font-semibold">Newsletter</h3>
+          <p className="mb-3 text-sm text-base-content/70">Get occasional updates and new work.</p>
+          <form onSubmit={handleSubscribe} className="flex flex-col gap-2 sm:flex-row lg:flex-col">
+            <input
+              type="email"
+              required
+              placeholder="Your email"
+              aria-label="Your email address"
+              className="input input-sm w-full bg-base-100"
+            />
+            <button type="submit" className="btn btn-sm bg-[#ed2519] text-white hover:bg-[#c91d14]">
+              Subscribe
+            </button>
+          </form>
+          {subscribed && <p className="mt-2 text-xs text-[#ed2519]">Thanks for subscribing!</p>}
         </div>
       </footer>
+      <p className="border-t border-base-content/10 px-5 py-4 text-center text-xs text-base-content/55">
+        © {new Date().getFullYear()} Kausar Mia. All rights reserved.
+      </p>
     </div>
   );
 };

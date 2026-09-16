@@ -11,6 +11,7 @@ import DotField from "../../../Animation/DotField";
 import Service from "../Service/Service";
 import Portfolio from "../Portfolio/Portfolio";
 import ClientReview from "../ClientReview/ClientReview";
+import ContactUs from "../ContactUs/ContactUs";
 import LogoSlide from "../LogoSlide/LogoSlide";
 
 function Hero() {
@@ -133,6 +134,8 @@ function Hero() {
         <Portfolio></Portfolio>
         {/* client review section */}
         <ClientReview></ClientReview>
+        {/* contact section */}
+        <ContactUs></ContactUs>
       </section>
     </>
   );

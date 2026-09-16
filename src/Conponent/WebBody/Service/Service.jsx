@@ -14,7 +14,7 @@ function Service() {
 
   return (
     <>
-      <div className="bg-base-200 py-16 text-base-content sm:py-20">
+      <div id="service" className="bg-base-200 py-16 text-base-content sm:py-20">
         <div className="text-center text-3xl font-bold sm:text-4xl">Our Service</div>
 
         <div className="mx-auto mt-10 grid w-full max-w-[1200px] grid-cols-1 justify-items-center gap-6 px-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">

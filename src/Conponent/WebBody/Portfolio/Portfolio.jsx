@@ -35,7 +35,7 @@ const Portfolio = () => {
   console.log(projects)
 
   return (
-    <div className="mx-auto overflow-hidden bg-base-100 px-4 py-16 text-base-content sm:px-5 sm:py-20">
+    <div id="portfolio"  className="mx-auto overflow-hidden bg-base-100 px-4 py-16 text-base-content sm:px-5 sm:py-20">
       <h2 className="mb-8 text-center text-3xl font-bold sm:mb-10 sm:text-4xl">My Portfolio</h2>
 
       <Box sx={{ width: "100%", color: "inherit" }}>

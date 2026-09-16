@@ -50,10 +50,10 @@ function Header() {
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-5 text-md text-base-content font-semibold">
                         <li className='hover:text-[#ed2519]'><a href='#hero'><IoMdHome />Home</a></li>
-                        <li className='hover:text-[#ed2519]'><a><IoSettingsSharp />Service</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='#service'><IoSettingsSharp />Service</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#about'><IoMdInformationCircle />About me</a></li>
-                        <li className='hover:text-[#ed2519]'><a><AiFillProject />Portfolio</a></li>
-                        <li className='hover:text-[#ed2519]'><a><IoMdContact/>Contact me</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='#portfolio'><AiFillProject />Portfolio</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='#contact'><IoMdContact/>Contact me</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end flex items-center gap-2 sm:gap-4">
