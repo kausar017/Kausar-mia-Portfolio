@@ -3,7 +3,7 @@ import BlobCursor from "../../../Animation/BlobCursor";
 
 function About() {
   return (
-    <div id="about" className="bg-base-100 px-5 pt-16 text-base-content sm:pt-20">
+    <div id="about" className="overflow-hidden bg-base-100 px-5 pb-0 pt-8 text-base-content sm:pt-10">
       <div>
         <h2 className="text-center text-3xl font-bold">About Me</h2>
         <p className="text-center mt-4 max-w-xl mx-auto px-5 text-md">
@@ -11,15 +11,15 @@ function About() {
 
         </p>
       </div>
-      <div className="mx-auto mt-8 flex w-full max-w-[1200px] flex-col items-center justify-between gap-8 lg:flex-row lg:gap-12">
-        <div className="w-full max-w-xl">
+      <div className="mx-auto mt-5 flex w-full max-w-[1200px] flex-col items-center justify-between gap-6 lg:flex-row lg:items-end lg:gap-12">
+        <div className="flex w-full max-w-xl items-end self-end">
           <img
-            className="mx-auto w-full max-w-xl"
+            className="mx-auto block w-full max-w-xl"
             src="https://i.postimg.cc/QNBhzf6d/fg.png"
             alt="kauser-img"
           />
         </div>
-        <div className="w-full max-w-[600px] text-justify text-base leading-relaxed sm:text-lg">
+        <div className="w-full max-w-[600px] self-center text-justify text-base leading-relaxed lg:text-sm">
           <p className="mb-4">
             Hello! I’m Kausar Mia, a passionate and dedicated Front-End Web
             Developer from Mymensingh, Bangladesh. I’ve completed my Diploma in

@@ -14,14 +14,22 @@ const Footer = () => {
           />
           <p>
             ACME Industries Ltd.
-            <br />  
+            <br />
             Providing reliable tech since 1992
           </p>
           <div className="flex gap-4 mt-4">
-            <IoLogoGithub size={30} />
-            <FaFacebookF size={30} />
-            <FaInstagram size={30}></FaInstagram>
-            <FaLinkedinIn size={30}></FaLinkedinIn>
+            <a href="https://github.com/kausar017" target="_blank" rel="noreferrer">
+              <IoLogoGithub size={30} />
+            </a>
+            <a href="https://www.facebook.com/kausar017" target="_blank" rel="noreferrer">
+              <FaFacebookF size={30} />
+            </a>
+            <a href="https://www.instagram.com/md.kousar_mia/" target="_blank" rel="noreferrer">
+              <FaInstagram size={30} />
+            </a>
+            <a href="https://www.linkedin.com/in/kausar-mia-developer/" target="_blank" rel="noreferrer">
+              <FaLinkedinIn size={30} />
+            </a>
           </div>
         </aside>
         <div className="col-span-1 grid grid-cols-2 gap-8 sm:grid-cols-4 lg:col-span-8">

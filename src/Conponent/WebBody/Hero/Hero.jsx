@@ -59,9 +59,10 @@ function Hero() {
               </h3>
 
               <p className="mb-6 text-lg">
-                I'm a frontend developer specializing in building (and
-                occasionally designing) exceptional digital experiences.
-                Currently, I'm focused on building responsive web applications.
+                I am a passionate Frontend Developer with expertise in React.js, Tailwind CSS, and modern web technologies. I create interactive, responsive, and user-friendly web applications that deliver exceptional user experiences.
+              </p>
+              <p className="mb-6 text-lg">
+                I am dedicated to continuous learning and staying up-to-date with the latest trends in web development. My goal is to build modern and impactful web applications that make a difference.
               </p>
               <div className="flex gap-4 my-4 text-base-content">
                 <a
