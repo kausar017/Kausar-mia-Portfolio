@@ -41,6 +41,7 @@ function Header() {
                             <li><a>Home</a></li>
                             <li><a>Service</a></li>
                             <li><a>About me</a></li>
+                            <li><a href="#education">Education</a></li>
                             <li><a>Portfolio</a></li>
                             <li><a>Contact me</a></li>
                         </ul>
@@ -52,6 +53,7 @@ function Header() {
                         <li className='hover:text-[#ed2519]'><a href='#hero'><IoMdHome />Home</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#service'><IoSettingsSharp />Service</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#about'><IoMdInformationCircle />About me</a></li>
+                        <li className='hover:text-[#ed2519]'><a href='#education'>Education</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#portfolio'><AiFillProject />Portfolio</a></li>
                         <li className='hover:text-[#ed2519]'><a href='#contact'><IoMdContact/>Contact me</a></li>
                     </ul>

@@ -13,6 +13,7 @@ import Portfolio from "../Portfolio/Portfolio";
 import ClientReview from "../ClientReview/ClientReview";
 import ContactUs from "../ContactUs/ContactUs";
 import LogoSlide from "../LogoSlide/LogoSlide";
+import Education from "../Education/Education";
 
 function Hero() {
   return (
@@ -114,7 +115,7 @@ function Hero() {
               <img
                 src="https://i.postimg.cc/QNBhzf6d/fg.png"
                 // src="https://i.postimg.cc/13bPggS7/control-loop.gif"
-                alt="kausar"
+                alt="Kausar Mia, frontend and MERN-stack developer"
                 className="relative z-10 w-full max-w-3xl mt-10"
               />
             </div>
@@ -128,6 +129,8 @@ function Hero() {
         <Service></Service>
         {/* about section  */}
         <About></About>
+        {/* education section */}
+        <Education></Education>
         {/* logo slide section */}
         <LogoSlide></LogoSlide>
         {/* portfolio section */}

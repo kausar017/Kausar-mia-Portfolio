@@ -1,2 +1,3 @@
 User-agent: *
 Allow: /
+Sitemap: https://kausarmia.web.app/sitemap.xml
