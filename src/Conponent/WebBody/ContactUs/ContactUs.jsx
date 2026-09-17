@@ -1,47 +1,6 @@
-import { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function ContactUs() {
-  const [status, setStatus] = useState("idle");
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
-    setStatus("sending");
-
-    const form = event.currentTarget;
-    const formData = new FormData(form);
-    const payload = {
-      name: formData.get("name"),
-      email: formData.get("email"),
-      message: formData.get("message"),
-      _subject: "New portfolio contact message",
-      _template: "table",
-      _captcha: "false",
-    };
-
-    try {
-      const response = await fetch("https://formsubmit.co/ajax/mdkousarmia71@gmail.com", {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
-        },
-        body: new URLSearchParams(payload).toString(),
-      });
-
-      const result = await response.json();
-      if (!response.ok || (result.success !== true && result.success !== "true")) {
-        throw new Error(result.message || "Message could not be sent");
-      }
-
-      form.reset();
-      setStatus("success");
-    } catch (error) {
-      console.error("Contact form submission failed:", error);
-      setStatus("error");
-    }
-  };
-
   return (
     <section id="contact" className="bg-base-100 px-5 py-16 text-base-content sm:py-20">
       <div className="mx-auto grid w-full max-w-[1200px] gap-10 lg:grid-cols-2 lg:items-center">
@@ -69,19 +28,25 @@ export default function ContactUs() {
           </div>
         </div>
 
-        <form onSubmit={handleSubmit} className="rounded-xl border border-base-content/10 bg-base-100 p-5 shadow-xl sm:p-6">
+        <form
+          action="https://formsubmit.co/mdkousarmia71@gmail.com"
+          method="POST"
+          className="rounded-xl border border-base-content/10 bg-base-100 p-5 shadow-xl sm:p-6"
+        >
           <input type="text" name="_honey" className="hidden" tabIndex="-1" autoComplete="off" />
+          <input type="hidden" name="_subject" value="New portfolio contact message" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://kausarmia.web.app/#contact" />
           <div className="grid gap-4 sm:grid-cols-2">
             <input name="name" type="text" required placeholder="Your name" className="input input-bordered w-full" />
             <input name="email" type="email" required placeholder="Your email" className="input input-bordered w-full" />
           </div>
           <textarea name="message" required placeholder="Tell me about your project" className="textarea textarea-bordered mt-4 min-h-36 w-full" />
-          <button type="submit" disabled={status === "sending"} className="btn mt-4 w-full border-none bg-[#ed2519] text-white hover:bg-[#c91d14] sm:w-auto">
+          <button type="submit" className="btn mt-4 w-full border-none bg-[#ed2519] text-white hover:bg-[#c91d14] sm:w-auto">
             <Send size={17} />
-            {status === "sending" ? "Sending..." : "Send Message"}
+            Send Message
           </button>
-          {status === "success" && <p className="mt-3 text-sm text-success">Thanks! Your message has been sent successfully.</p>}
-          {status === "error" && <p className="mt-3 text-sm text-error">Message could not be sent. Please try again or email me directly.</p>}
         </form>
       </div>
     </section>
