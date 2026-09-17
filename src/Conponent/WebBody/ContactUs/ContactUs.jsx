@@ -10,23 +10,34 @@ export default function ContactUs() {
 
     const form = event.currentTarget;
     const formData = new FormData(form);
-    formData.append("_subject", "New portfolio contact message");
-    formData.append("_template", "table");
+    const payload = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+      _subject: "New portfolio contact message",
+      _template: "table",
+      _captcha: "false",
+    };
 
     try {
       const response = await fetch("https://formsubmit.co/ajax/mdkousarmia71@gmail.com", {
         method: "POST",
-        headers: { Accept: "application/json" },
-        body: formData,
+        headers: {
+          Accept: "application/json",
+          "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8",
+        },
+        body: new URLSearchParams(payload).toString(),
       });
 
-      if (!response.ok) {
-        throw new Error("Message could not be sent");
+      const result = await response.json();
+      if (!response.ok || (result.success !== true && result.success !== "true")) {
+        throw new Error(result.message || "Message could not be sent");
       }
 
       form.reset();
       setStatus("success");
-    } catch {
+    } catch (error) {
+      console.error("Contact form submission failed:", error);
       setStatus("error");
     }
   };

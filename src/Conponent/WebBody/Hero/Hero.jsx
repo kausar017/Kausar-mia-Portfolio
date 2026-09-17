@@ -97,7 +97,7 @@ function Hero() {
               </div>
               <div className="flex gap-4 z-10">
                 <a
-                  href="#"
+                  href="#contact"
                   className="btn bg-[#ED2519] border-none text-white hover:bg-white hover:text-black z-10"
                 >
                   Hire Me

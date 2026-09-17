@@ -47,9 +47,12 @@ function About() {
             and exploring creative ideas that inspire me to grow as both a
             developer and a person.
           </p>
-          <button className="btn bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black border-none mt-6 ">
+          <a
+            href="#contact"
+            className="btn mt-6 border-none bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black"
+          >
             <FaPhoneAlt /> Contact Me
-          </button>
+          </a>
         </div>
       </div>
     </div>
