@@ -19,7 +19,10 @@ function Education() {
         <div className="relative mx-auto mt-12 max-w-3xl">
           <div className="absolute left-3 top-2 h-[calc(100%-1rem)] w-px bg-[#ed2519]/30 sm:left-1/2 sm:-translate-x-1/2" />
 
-          <article className="relative grid gap-6 sm:grid-cols-2 sm:gap-12">
+          <article className="relative grid gap-6 pl-12 sm:grid-cols-2 sm:gap-12 sm:pl-0">
+            <span className="absolute left-0 top-1 flex h-7 w-7 items-center justify-center rounded-full border-4 border-base-200 bg-[#ed2519] sm:left-1/2 sm:-translate-x-1/2">
+              <span className="h-2 w-2 rounded-full bg-white" />
+            </span>
             <div className="sm:text-right">
               <p className="text-sm font-semibold text-[#ed2519]">2024</p>
               <h3 className="mt-2 text-xl font-bold">
@@ -29,26 +32,23 @@ function Education() {
                 Sherpur Polytechnic Institute
               </p>
             </div>
-            <div className="relative pl-10 sm:pl-0">
-              <span className="absolute left-0 top-1 flex h-7 w-7 items-center justify-center rounded-full border-4 border-base-200 bg-[#ed2519] sm:-left-[3.45rem]">
-                <span className="h-2 w-2 rounded-full bg-white" />
-              </span>
+            <div>
               <p className="text-sm font-semibold text-base-content/60">Result</p>
-              <p className="mt-2 text-sm leading-6 text-base-content/70">Grade A</p>
+              <p className="mt-2 text-sm leading-6 text-base-content/70">CGPA 3.38</p>
             </div>
           </article>
 
-          <article className="relative mt-12 grid gap-6 sm:grid-cols-2 sm:gap-12">
-            <div className="order-2 relative pl-10 sm:order-1 sm:pl-0 sm:text-right">
+          <article className="relative mt-12 grid gap-6 pl-12 sm:grid-cols-2 sm:gap-12 sm:pl-0">
+            <span className="absolute left-0 top-1 flex h-7 w-7 items-center justify-center rounded-full border-4 border-base-200 bg-[#ed2519] sm:left-1/2 sm:-translate-x-1/2">
+              <span className="h-2 w-2 rounded-full bg-white" />
+            </span>
+            <div className="order-2 sm:order-1 sm:text-right">
               <p className="text-sm font-semibold text-base-content/60">Result</p>
               <p className="mt-2 text-sm leading-6 text-base-content/70">
                 GPA 4.90
               </p>
             </div>
-            <div className="order-1 pl-10 sm:order-2">
-              <span className="absolute left-0 top-1 flex h-7 w-7 items-center justify-center rounded-full border-4 border-base-200 bg-[#ed2519] sm:left-1/2 sm:-translate-x-1/2">
-                <span className="h-2 w-2 rounded-full bg-white" />
-              </span>
+            <div className="order-1 sm:order-2">
               <p className="text-sm font-semibold text-[#ed2519]">2021</p>
               <h3 className="mt-2 text-xl font-bold">
                 Higher Secondary Certificate

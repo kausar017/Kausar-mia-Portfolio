@@ -103,7 +103,7 @@ function Hero() {
                   Hire Me
                 </a>
                 <a
-                  href="public/CV/Kausar_Mia_CV.pdf"
+                  href="public/CV/Kausar_mia_new_CV.pdf"
                   download
                   className="btn text-white bg-transparent border border-white hover:bg-[#ED2519] z-10"
                 >

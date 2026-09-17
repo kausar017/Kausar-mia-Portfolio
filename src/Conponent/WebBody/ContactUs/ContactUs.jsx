@@ -2,11 +2,33 @@ import { useState } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
 
 export default function ContactUs() {
-  const [sent, setSent] = useState(false);
+  const [status, setStatus] = useState("idle");
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    setSent(true);
+    setStatus("sending");
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    formData.append("_subject", "New portfolio contact message");
+    formData.append("_template", "table");
+
+    try {
+      const response = await fetch("https://formsubmit.co/ajax/mdkousarmia71@gmail.com", {
+        method: "POST",
+        headers: { Accept: "application/json" },
+        body: formData,
+      });
+
+      if (!response.ok) {
+        throw new Error("Message could not be sent");
+      }
+
+      form.reset();
+      setStatus("success");
+    } catch {
+      setStatus("error");
+    }
   };
 
   return (
@@ -37,16 +59,18 @@ export default function ContactUs() {
         </div>
 
         <form onSubmit={handleSubmit} className="rounded-xl border border-base-content/10 bg-base-100 p-5 shadow-xl sm:p-6">
+          <input type="text" name="_honey" className="hidden" tabIndex="-1" autoComplete="off" />
           <div className="grid gap-4 sm:grid-cols-2">
-            <input type="text" required placeholder="Your name" className="input input-bordered w-full" />
-            <input type="email" required placeholder="Your email" className="input input-bordered w-full" />
+            <input name="name" type="text" required placeholder="Your name" className="input input-bordered w-full" />
+            <input name="email" type="email" required placeholder="Your email" className="input input-bordered w-full" />
           </div>
-          <textarea required placeholder="Tell me about your project" className="textarea textarea-bordered mt-4 min-h-36 w-full" />
-          <button type="submit" className="btn mt-4 w-full border-none bg-[#ed2519] text-white hover:bg-[#c91d14] sm:w-auto">
+          <textarea name="message" required placeholder="Tell me about your project" className="textarea textarea-bordered mt-4 min-h-36 w-full" />
+          <button type="submit" disabled={status === "sending"} className="btn mt-4 w-full border-none bg-[#ed2519] text-white hover:bg-[#c91d14] sm:w-auto">
             <Send size={17} />
-            Send Message
+            {status === "sending" ? "Sending..." : "Send Message"}
           </button>
-          {sent && <p className="mt-3 text-sm text-[#ed2519]">Thanks! Your message is ready to send.</p>}
+          {status === "success" && <p className="mt-3 text-sm text-success">Thanks! Your message has been sent successfully.</p>}
+          {status === "error" && <p className="mt-3 text-sm text-error">Message could not be sent. Please try again or email me directly.</p>}
         </form>
       </div>
     </section>
