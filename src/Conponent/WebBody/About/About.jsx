@@ -56,7 +56,7 @@ function About() {
             alt="kauser-img"
           />
         </div>
-        <div className="about-copy w-full max-w-[600px] self-center text-justify text-base leading-relaxed lg:text-sm">
+        <div className="about-copy w-full max-w-[600px] self-center text-base leading-relaxed lg:text-sm">
           <p className="mb-4">
             Hello! I’m Kausar Mia, a passionate and dedicated Front-End Web
             Developer from Mymensingh, Bangladesh. I’ve completed my Diploma in
