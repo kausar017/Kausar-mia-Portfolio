@@ -109,6 +109,45 @@ function Education() {
             </div>
           </article>
         </div>
+
+        <div className="mx-auto mt-14 max-w-5xl">
+          <div className="mb-6 text-center">
+            <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#ed2519]">
+              Certifications
+            </p>
+            <h3 className="mt-2 text-2xl font-bold sm:text-3xl">Professional Training</h3>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2">
+            <a
+              href="https://drive.google.com/file/d/1KpYf8lVn6fF05O4Edu7oa0LQo7bJDVDU/view"
+              target="_blank"
+              rel="noreferrer"
+              className="education-item block rounded-2xl border border-base-content/10 bg-base-100 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#ed2519] hover:shadow-[0_10px_25px_rgba(237,37,25,0.12)]"
+            >
+              <p className="text-sm font-semibold text-[#ed2519]">2024</p>
+              <h4 className="mt-2 text-xl font-bold">Web Development Certification</h4>
+              <p className="mt-2 text-base-content/70">Creative IT Institute</p>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#ed2519]">
+                Live Preview →
+              </span>
+            </a>
+
+            <a
+              href="https://drive.google.com/file/d/1b-UvrsuiBGMp2VWJgEJMhkCXfmMzkaNA/view?usp=sharing"
+              target="_blank"
+              rel="noreferrer"
+              className="education-item block rounded-2xl border border-base-content/10 bg-base-100 p-5 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-[#ed2519] hover:shadow-[0_10px_25px_rgba(237,37,25,0.12)]"
+            >
+              <p className="text-sm font-semibold text-[#ed2519]">2024</p>
+              <h4 className="mt-2 text-xl font-bold">Web Development Certification</h4>
+              <p className="mt-2 text-base-content/70">Programming Hero</p>
+              <span className="mt-4 inline-flex items-center text-sm font-semibold text-[#ed2519]">
+                Live Preview →
+              </span>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
