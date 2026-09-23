@@ -1,10 +1,39 @@
+import { useEffect, useRef } from "react";
 import { Mail, MapPin, Phone, Send } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ContactUs() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".contact-copy, .contact-form",
+        { opacity: 0, y: 30 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <section id="contact" className="bg-base-100 px-5 py-16 text-base-content sm:py-20">
+    <section ref={sectionRef} id="contact" className="bg-base-100 px-5 py-16 text-base-content sm:py-20">
       <div className="mx-auto grid w-full max-w-[1200px] gap-10 lg:grid-cols-2 lg:items-center">
-        <div>
+        <div className="contact-copy">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#ed2519]">
             Contact Us
           </p>
@@ -31,7 +60,7 @@ export default function ContactUs() {
         <form
           action="https://formsubmit.co/mdkousarmia71@gmail.com"
           method="POST"
-          className="rounded-xl border border-base-content/10 bg-base-100 p-5 shadow-xl sm:p-6"
+          className="contact-form rounded-xl border border-base-content/10 bg-base-100 p-5 shadow-xl sm:p-6"
         >
           <input type="text" name="_honey" className="hidden" tabIndex="-1" autoComplete="off" />
           <input type="hidden" name="_subject" value="New portfolio contact message" />

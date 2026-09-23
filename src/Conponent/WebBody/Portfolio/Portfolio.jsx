@@ -6,8 +6,13 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { BsGithub } from "react-icons/bs";
 import { LinkIcon, VideoIcon } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Portfolio = () => {
+  const portfolioRef = React.useRef(null);
   const [value, setValue] = React.useState(0);
   const [projects, setProjects] = useState([])
   const [copiedProject, setCopiedProject] = useState(null);
@@ -32,10 +37,32 @@ const Portfolio = () => {
       .catch((error) => console.error(error));
   }, [0])
 
-  console.log(projects)
+  useEffect(() => {
+    if (!projects.length) return;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".project-card",
+        { opacity: 0, y: 35 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.75,
+          stagger: 0.12,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: portfolioRef.current,
+            start: "top 80%",
+          },
+        }
+      );
+    }, portfolioRef);
+
+    return () => ctx.revert();
+  }, [projects.length, value]);
 
   return (
-    <div id="portfolio"  className="mx-auto overflow-hidden bg-base-100 px-4 py-16 text-base-content sm:px-5 sm:py-20">
+    <div ref={portfolioRef} id="portfolio"  className="mx-auto overflow-hidden bg-base-100 px-4 py-16 text-base-content sm:px-5 sm:py-20">
       <h2 className="mb-8 text-center text-3xl font-bold sm:mb-10 sm:text-4xl">My Portfolio</h2>
 
       <Box sx={{ width: "100%", color: "inherit" }}>
@@ -65,7 +92,7 @@ const Portfolio = () => {
                 {projects.map((project, index) => (
                   <div
                     key={index}
-                    className="group card bg-base-200 shadow-md border border-[#ffff]/20 rounded-md
+                    className="project-card group card bg-base-200 shadow-md border border-[#ffff]/20 rounded-md
         hover:shadow-lg transition-all duration-300 hover:-translate-y-1 
         overflow-hidden"
                   >
@@ -180,7 +207,7 @@ const Portfolio = () => {
                 {projects.filter(project => project.projectType === "react").map((project, index) => (
                   <div
                     key={index}
-                    className="group card bg-base-200 shadow-md border border-[#ffff]/20 rounded-md
+                    className="project-card group card bg-base-200 shadow-md border border-[#ffff]/20 rounded-md
         hover:shadow-lg transition-all duration-300 hover:-translate-y-1 
         overflow-hidden"
                   >
@@ -294,7 +321,7 @@ const Portfolio = () => {
                 {projects.filter(project => project.projectType === "cms").map((project, index) => (
                   <div
                     key={index}
-                    className="group card bg-base-200 shadow-md border border-[#ffff]/20 rounded-md
+                    className="project-card group card bg-base-200 shadow-md border border-[#ffff]/20 rounded-md
         hover:shadow-lg transition-all duration-300 hover:-translate-y-1 
         overflow-hidden"
                   >

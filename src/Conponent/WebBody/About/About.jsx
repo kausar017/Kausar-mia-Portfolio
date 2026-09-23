@@ -1,25 +1,62 @@
+import { useEffect, useRef } from "react";
 import { FaPhoneAlt } from "react-icons/fa";
-import BlobCursor from "../../../Animation/BlobCursor";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 function About() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    const elements = sectionRef.current
+      ? [...sectionRef.current.querySelectorAll(".about-heading, .about-copy, .about-image, .about-button")]
+      : [];
+
+    if (!elements.length) return undefined;
+
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        elements,
+        { opacity: 0, y: 20 },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.55,
+          stagger: 0.08,
+          ease: "power3.out",
+          clearProps: "transform, opacity",
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top 75%",
+            once: true,
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
-    <div id="about" className="overflow-hidden bg-base-100 px-5 pb-0 pt-8 text-base-content sm:pt-10">
+    <div ref={sectionRef} id="about" className="overflow-hidden bg-base-100 px-5 pb-0 pt-8 text-base-content sm:pt-10">
       <div>
-        <h2 className="text-center text-3xl font-bold">About Me</h2>
-        <p className="text-center mt-4 max-w-xl mx-auto px-5 text-md">
+        <h2 className="about-heading text-center text-3xl font-bold">About Me</h2>
+        <p className="about-copy text-center mt-4 max-w-xl mx-auto px-5 text-md">
           Passionate Frontend Developer creating interactive, responsive, and user-friendly web applications with modern technologies.
 
         </p>
       </div>
       <div className="mx-auto mt-5 flex w-full max-w-[1200px] flex-col items-center justify-between gap-6 lg:flex-row lg:items-end lg:gap-12">
-        <div className="flex w-full max-w-xl items-end self-end">
+        <div className="about-image flex w-full max-w-xl items-center justify-center self-center lg:self-end">
           <img
             className="mx-auto block w-full max-w-xl"
             src="https://i.postimg.cc/QNBhzf6d/fg.png"
             alt="kauser-img"
           />
         </div>
-        <div className="w-full max-w-[600px] self-center text-justify text-base leading-relaxed lg:text-sm">
+        <div className="about-copy w-full max-w-[600px] self-center text-justify text-base leading-relaxed lg:text-sm">
           <p className="mb-4">
             Hello! I’m Kausar Mia, a passionate and dedicated Front-End Web
             Developer from Mymensingh, Bangladesh. I’ve completed my Diploma in
@@ -49,7 +86,7 @@ function About() {
           </p>
           <a
             href="#contact"
-            className="btn mt-6 border-none bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black"
+            className="about-button btn mt-6 border-none bg-[#ed2519] px-6 py-5 text-white hover:bg-white hover:text-black"
           >
             <FaPhoneAlt /> Contact Me
           </a>

@@ -1,7 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function ClientReview() {
+    const sectionRef = useRef(null);
     const [reviews, setReviews] = useState([]);
     const [activeReview, setActiveReview] = useState(0);
     const [isPaused, setIsPaused] = useState(false);
@@ -23,6 +28,30 @@ export default function ClientReview() {
         return () => clearInterval(interval);
     }, [isPaused, reviews.length]);
 
+    useEffect(() => {
+        if (!reviews.length) return;
+
+        const ctx = gsap.context(() => {
+            gsap.fromTo(
+                ".review-card",
+                { opacity: 0, y: 30 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.8,
+                    stagger: 0.12,
+                    ease: "power3.out",
+                    scrollTrigger: {
+                        trigger: sectionRef.current,
+                        start: "top 80%",
+                    },
+                }
+            );
+        }, sectionRef);
+
+        return () => ctx.revert();
+    }, [reviews.length]);
+
     const showPreviousReview = () => {
         setActiveReview((current) => (current - 1 + reviews.length) % reviews.length);
     };
@@ -34,7 +63,7 @@ export default function ClientReview() {
     const scrollingReviews = [...reviews, ...reviews];
 
     return (
-        <section className="overflow-hidden bg-base-200 bg-gradient-to-br from-[#ed2519]/10 via-transparent to-transparent py-20">
+        <section ref={sectionRef} className="overflow-hidden bg-base-200 bg-gradient-to-br from-[#ed2519]/10 via-transparent to-transparent py-20">
             <div className="mx-auto mb-10 max-w-3xl px-5 text-center">
                 <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-[#ed2519]">
                     Client Reviews
@@ -57,7 +86,7 @@ export default function ClientReview() {
                 >
                     {reviews.map((review, index) => (
                         <article
-                            className="card mx-2 flex min-h-[245px] w-[calc(100%-1rem)] shrink-0 flex-col justify-between rounded-xl border border-base-content/10 bg-base-200/60 p-5 shadow-xl sm:p-6"
+                            className="review-card card mx-2 flex min-h-[245px] w-[calc(100%-1rem)] shrink-0 flex-col justify-between rounded-xl border border-base-content/10 bg-base-200/60 p-5 shadow-xl sm:p-6"
                             key={`${review.client_name}-${index}`}
                         >
                             <div className="mb-4 flex items-center justify-between gap-4">
@@ -106,7 +135,7 @@ export default function ClientReview() {
                 <div className="flex w-max animate-review-scroll hover:[animation-play-state:paused] motion-reduce:[animation-play-state:paused]">
                     {scrollingReviews.map((review, index) => (
                         <article
-                            className="card mr-6 flex min-h-[245px] w-[390px] shrink-0 flex-col justify-between rounded-xl border border-base-content/10 bg-base-200/60 p-6 shadow-xl"
+                            className="review-card card mr-6 flex min-h-[245px] w-[390px] shrink-0 flex-col justify-between rounded-xl border border-base-content/10 bg-base-200/60 p-6 shadow-xl"
                             key={`${review.client_name}-desktop-${index}`}
                         >
                             <div className="mb-4 flex items-center justify-between gap-4">

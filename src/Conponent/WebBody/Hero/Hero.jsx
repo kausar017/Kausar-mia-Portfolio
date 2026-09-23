@@ -6,6 +6,8 @@ import {
 } from "react-icons/fa";
 import { IoLogoGithub } from "react-icons/io";
 import { Typewriter } from "react-simple-typewriter";
+import { useEffect, useRef } from "react";
+import { gsap } from "gsap";
 import About from "../About/About";
 import DotField from "../../../Animation/DotField";
 import Service from "../Service/Service";
@@ -16,10 +18,42 @@ import LogoSlide from "../LogoSlide/LogoSlide";
 import Education from "../Education/Education";
 
 function Hero() {
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const title = heroRef.current?.querySelector("h1");
+      const subTitle = heroRef.current?.querySelector("h3");
+      const textBlocks = heroRef.current?.querySelectorAll("p, .social-links, .hero-actions");
+      const image = heroRef.current?.querySelector("img");
+
+      gsap.fromTo(
+        [title, subTitle].filter(Boolean),
+        { opacity: 0, y: 30 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.15 }
+      );
+
+      gsap.fromTo(
+        textBlocks || [],
+        { opacity: 0, y: 24 },
+        { opacity: 1, y: 0, duration: 0.8, ease: "power3.out", stagger: 0.12, delay: 0.2 }
+      );
+
+      gsap.fromTo(
+        image,
+        { opacity: 0, x: 60, scale: 0.96 },
+        { opacity: 1, x: 0, scale: 1, duration: 1, ease: "power3.out", delay: 0.25 }
+      );
+    }, heroRef);
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <>
       <div>
         <div
+          ref={heroRef}
           id="hero"
           className="relative flex items-center justify-center overflow-hidden bg-base-100 bg-gradient-to-br from-[#ed2519]/10 via-transparent to-transparent text-base-content md:flex-col"
         >
@@ -66,7 +100,7 @@ function Hero() {
               <p className="mb-6 text-lg">
                 I am dedicated to continuous learning and staying up-to-date with the latest trends in web development. My goal is to build modern and impactful web applications that make a difference.
               </p>
-              <div className="flex gap-4 my-4 text-base-content">
+              <div className="social-links flex gap-4 my-4 text-base-content">
                 <a
                   href="https://github.com/kausar017"
                   target="_blank"
@@ -95,7 +129,7 @@ function Hero() {
                   <FaLinkedinIn size={30} />
                 </a>
               </div>
-              <div className="flex gap-4 z-10">
+              <div className="hero-actions flex gap-4 z-10">
                 <a
                   href="#contact"
                   className="btn bg-[#ED2519] border-none text-white hover:bg-white hover:text-black z-10"

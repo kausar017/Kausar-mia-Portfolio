@@ -38,12 +38,12 @@ function Header() {
                         <ul
                             tabIndex={0}
                             className="menu menu-sm dropdown-content rounded-box z-[1] mt-3 w-52 p-2 shadow bg-base-200 text-base-content">
-                            <li><a>Home</a></li>
-                            <li><a>Service</a></li>
-                            <li><a>About me</a></li>
+                            <li><a href="#hero">Home</a></li>
+                            <li><a href="#service">Service</a></li>
+                            <li><a href="#about">About me</a></li>
                             <li><a href="#education">Education</a></li>
-                            <li><a>Portfolio</a></li>
-                            <li><a>Contact me</a></li>
+                            <li><a href="#portfolio">Portfolio</a></li>
+                            <li><a href="#contact">Contact me</a></li>
                         </ul>
                     </div>
                     <a className="shrink-0 text-xl text-[#f03613]"><img className='w-20 sm:w-24' src="https://i.postimg.cc/SxrqzBBZ/download.png" alt="kauser" /></a>
